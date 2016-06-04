@@ -70,4 +70,10 @@ var findRoomsByProjector = function(projector){
 
 var Rooms = mongoose.model('Rooms', roomSchema);
 
-findRoomsByName("Finland");
+var disconnectDB = function(){
+  mongoose.disconnect();
+}
+
+var reconnectDB = function(){
+  mongoose.connect('mongodb://localhost/room_reservation_db');
+}
