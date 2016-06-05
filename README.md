@@ -17,3 +17,6 @@ Web service:
 
 Slack Team:
 https://teamsolaire.slack.com
+
+Email:
+teamsolaire.hackathon@gmail.com
