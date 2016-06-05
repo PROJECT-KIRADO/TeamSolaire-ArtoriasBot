@@ -4,10 +4,10 @@ Sir Artorias goes around and find a room that is available for you to do your me
 Dependencies:
 - Botkit: https://howdy.ai/botkit/
 - body-parser
-- express
+- express: http://expressjs.com
 - google-auth-library
 - googleapis
-- mongoose
+- mongoose: http://mongoosejs.com
 
 Database: 
 - MongoDB
