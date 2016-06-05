@@ -35,8 +35,49 @@ controller.hears(["/bookaroom", "^./bookaroom.$"],["direct_message","direct_ment
       console.log(yesFormat.test(response.text));
       if (yesFormat.test(response.text)) {
         
-        convo.say('Let\'s me check you for...');
-        calendarServices.addEventToCalendar(calendarServices.setEvent());
+        var capacity;
+        var type;
+        var needProjector;
+        
+        askCapacity = function (response, convo) {
+          convo.ask('How many are you?', function(response, convo) {
+            askRoomType(response, convo);
+            capacity = response.text;
+            convo.next();
+          });
+        }
+        askRoomType = function (response, convo) {
+          convo.ask('What kind of room you want to book?', function(response, convo) {
+            askHaveProjector(response, convo);
+            type = response.text;
+            convo.next();
+          });
+        }
+        askHaveProjector = function (response, convo) {
+          convo.ask('Did you need a projector?', function(response, convo) {
+            if (yesFormat.test(response.text)) {
+              needProjector = 'Yes';
+            }
+            else {
+              needProjector = 'No';
+            }
+            
+            askConfirmation(response, convo);
+            convo.next();
+          });
+        }
+        askConfirmation = function (response, convo) {
+          convo.say('Capacity: ' + capacity + '\nRoom Type: ' + type + "\nNeed Projector: " + needProjector);
+          convo.ask('Is this exactly what you want? (y/N)', function(response,convo) {
+            
+            convo.next();
+          });          
+        }
+
+        bot.startConversation(message, askCapacity);
+
+        convo.say('Alright, let\'s me check for you...');
+        //calendarServices.addEventToCalendar(calendarServices.setEvent());
       }
       else if (noFormat.test(response.text)) {
         convo.say('Ok then...');
