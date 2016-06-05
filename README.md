@@ -16,4 +16,4 @@ Web service:
 - Node JS
 
 Slack Team:
-teamsolaire.slack.com
+https://teamsolaire.slack.com
