@@ -34,7 +34,9 @@ controller.hears(["/bookaroom", "^./bookaroom.$"],["direct_message","direct_ment
       
       console.log(yesFormat.test(response.text));
       if (yesFormat.test(response.text)) {
+        
         convo.say('Let\'s me check you for...');
+        calendarServices.addEventToCalendar(calendarServices.setEvent());
       }
       else if (noFormat.test(response.text)) {
         convo.say('Ok then...');
