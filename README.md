@@ -1,5 +1,5 @@
 # TeamSolaire-ArtoriasBot
-Sir Artorias goes around and find a room that is available for you to do your meeting in peace...
+Sir Artorias goes around and find a room that is available for you to do your meeting in peace...It a bot for Slack which will find the room and the perfect date for you to reserve.
 
 Dependencies:
 - Botkit: https://howdy.ai/botkit/
