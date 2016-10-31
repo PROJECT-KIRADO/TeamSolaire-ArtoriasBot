@@ -3,3 +3,4 @@
 {"_id":{"$oid":"57531cc5f6aa583812049d81"},"num":"A2333","name":"Wolf","floor":"2","type":"individual","capacity":"1","board":"false","projector":"false"}
 {"_id":{"$oid":"57531d2ef6aa583812049d82"},"num":"A5911","name":"Jupiter","floor":"5","type":"auditorium","capacity":"50","board":"false","projector":"true"}
 {"_id":{"$oid":"57531d2ef6aa583812049d83"},"num":"A15783","name":"Rocket","floor":"15","type":"auditorium","capacity":"40","board":"false","projector":"true"}
+{"_id":{"$oid":"57531d2ef6aa583812049d84"},"num":"A15784","name":"Poop","floor":"15","type":"auditorium","capacity":"40","board":"false","projector":"false"}
